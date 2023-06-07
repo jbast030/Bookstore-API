@@ -7,3 +7,6 @@ CREATE TABLE Users (
     deleted_at DATE,
     PRIMARY KEY (id)
 );
+
+INSERT INTO Users (name, created_at, deleted_at)
+VALUES ('Bill', '2023-06-06', NULL);
