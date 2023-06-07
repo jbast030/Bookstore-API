@@ -1,9 +1,9 @@
 use geek_text;
 
 create table wish_lists (
-id int AUTO_INCREMENT PRIMARY KEY,
-user_id int,
-FOREIGN KEY (user_id) references users(id)
+  id int AUTO_INCREMENT PRIMARY KEY,
+  user_id int,
+  FOREIGN KEY (user_id) references users(id)
 );
 
 create table wish_lists_books (
