@@ -6,7 +6,7 @@ create table wish_lists (
   FOREIGN KEY (user_id) references users(id)
 );
 
-create table wish_lists_books (
+create table wish_list_books (
   id int AUTO_INCREMENT PRIMARY KEY,
   wish_list_id int,
   book_id int,
