@@ -1,3 +1,5 @@
+use geek_text;
+
 CREATE TABLE books (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name TINYTEXT,
