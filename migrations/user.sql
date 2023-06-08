@@ -11,14 +11,14 @@ CREATE TABLE users (
 INSERT INTO users (name, created_at, deleted_at)
 VALUES ('Bill', '2023-06-06', NULL);
 
-INSERT INTO Users (name, created_at, deleted_at)
+INSERT INTO users (name, created_at, deleted_at)
 VALUES ('Jim', '2023-06-07', NULL);
 
-INSERT INTO Users (name, created_at, deleted_at)
+INSERT INTO users (name, created_at, deleted_at)
 VALUES ('Phil', '2023-06-08', NULL);
 
-INSERT INTO Users (name, created_at, deleted_at)
+INSERT INTO users (name, created_at, deleted_at)
 VALUES ('Kevin', '2023-06-09', NULL);
 
-INSERT INTO Users (name, created_at, deleted_at)
+INSERT INTO users (name, created_at, deleted_at)
 VALUES ('Kayle', '2023-06-10', NULL);
