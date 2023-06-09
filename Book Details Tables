@@ -1,0 +1,7 @@
+CREATE TABLE book_details (
+  id SERIAL PRIMARY KEY,
+  book_id INT,
+  created_at DATE,
+  deleted_at DATE,
+  FOREIGN KEY (book_id) REFERENCES books(id)
+);
