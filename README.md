@@ -12,13 +12,13 @@ Follow the instructions below to run the API locally:
    - Install MySQL server on your preferred operating system:
      - Download MySQL server from: [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
      - Only install the server, not the client or any other recommended software.
-   - Create a database on the MySQL server:
-     - Run the following command: `CREATE DATABASE geek_text;`
-   - Create a user on the MySQL server:
+   - Create the DB and a user on it:
      - Run the following commands:
        ```
-       USE geek_text;
-       CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+        CREATE DATABASE geek_text;
+        USE geek_text;
+        CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+        GRANT ALL PRIVILEGES ON geek_text.* TO 'user'@'localhost'
        ```
      - Note: Replace "user" and "password" with more secure values.
      - Note: "localhost" can be a local or remote IP depending on where the MySQL server is hosted.
