@@ -8,35 +8,36 @@ Follow the instructions below to run the API locally:
 
 1. Clone the repository: Clone the repository from GitHub using GitHub Desktop or the terminal.
 
-2. Setting up MySQL:
-   - Install MySQL server on your preferred operating system:
-     - Download MySQL server from: [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
-     - Only install the server, not the client or any other recommended software.
-   - Create the DB and a user on it:
-     - Run the following commands:
-       ```
-        CREATE DATABASE geek_text;
-        USE geek_text;
-        CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
-        GRANT ALL PRIVILEGES ON geek_text.* TO 'user'@'localhost'
-       ```
-     - Note: Replace "user" and "password" with more secure values.
-     - Note: "localhost" can be a local or remote IP depending on where the MySQL server is hosted.
-   - Grant privileges to the user for using the database:
-     - Run the following command:
-       ```
-       GRANT ALL PRIVILEGES ON geek_text.* TO 'user'@'localhost';
-       ```
-
-3. Configure the environment:
+2. Configure the environment:
    - Copy the `.env-example` file and rename the copy to `.env`.
    - Fill in the variables in the `.env` file.
 
-4. Start the server:
-   - Run the following command in Bash:
+3. Install all the required packages 
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Creating dummy data
+
+   The following command will create 15 records in all tables. If you want more or less, try changing the parameter
+
+   ```
+   python manage.py seed djangoBookStoreApi --number=15
+   ```
+
+5. Start the server:
+   - Run the following command in Bash (MacOS/Linux) or Powershell (Windows):
      ```
      python manage.py runserver
      ```
+
+## Managing Packages
+
+Once you add a new package, make sure to add it and its version number to requirements.txt by running
+
+```
+pip freeze > requirements.txt
+```
 
 ## Making a SQL Migration
 
