@@ -1,5 +1,3 @@
-from django.db import models
-
 from .models.Books import Books
 from .models.ShoppingCarts import ShoppingCarts
 from .models.ShoppingCartBooks import ShoppingCartBooks

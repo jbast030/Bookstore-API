@@ -1,12 +1,12 @@
 from django.db import models
-from .users import User
-from .books import Book
+from .Users import Users
+from .Books import Books
 
 class BookComments(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    book = models.ForeignKey(Books, on_delete=models.CASCADE)
     comment = models.TextField()
 
     def __str__(self):
-        return f"BookComment {self.id}"
+        return self.id
