@@ -9,5 +9,5 @@ urlpatterns = [
     path('test/', test_view),
     path('user/<int:id>/shopping_carts', shopping_carts_view),
     path('user/<int:user_id>/profile', UserProfileView.as_view(), name='user_profile'),
-    path('user/int:id>/wishlist', wish_list_books_view),
+    path('user/<int:id>/wishlist', wish_list_books_view),
 ]
