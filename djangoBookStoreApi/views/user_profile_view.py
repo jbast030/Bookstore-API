@@ -53,6 +53,7 @@ class CreateUserView(View):
                 'error': 'Username is required'
             }
             return JsonResponse(response, status=400)
+        #h
 
 class UserDetailView(View):
     def get(self, request):
