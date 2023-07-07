@@ -15,3 +15,4 @@ urlpatterns = [
     path('user/', UserDetailView.as_view(), name='user-detail'),
     path('user/<int:id>/wishlist', wish_list_books_view),
 ]
+#h
