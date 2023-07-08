@@ -42,9 +42,6 @@ def add_book_to_wishlist(request):
     bookID = data.get('bookID')
     wishlistID = data.get('wishlistID')
 
-    print(bookID)
-    print(wishlistID)
-
     #Check if either ID is missing in request. If so, send error. Else, continue with bookID check.
     if bookID == None or wishlistID == None:
         response = {
