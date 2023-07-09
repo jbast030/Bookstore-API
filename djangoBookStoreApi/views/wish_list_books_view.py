@@ -139,7 +139,7 @@ def create_new_wishlist(request):
 
         response = {
             'Message' : 'New wishlist created.',
-            'User ID' : userID,
+            'user_id' : userID,
             'Wish List Name' : wishlistName
         }
 
