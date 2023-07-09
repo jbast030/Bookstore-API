@@ -74,7 +74,7 @@ def add_book_to_wishlist(request):
         response = {
             'Message' : 'Book has been successfully added to the associated wish list.',
             'book_id' : bookID,
-            'Wish List ID' : wishlistID
+            'wish_list_id' : wishlistID
         }
         return JsonResponse(response, safe=False)
     
