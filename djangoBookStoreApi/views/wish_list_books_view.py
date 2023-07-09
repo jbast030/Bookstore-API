@@ -47,7 +47,7 @@ def add_book_to_wishlist(request):
     #Check if either ID is missing in request. If so, send error. Else, continue with bookID check.
     if bookID == None or wishlistID == None:
         response = {
-            'Error' : 'BookID or WishlistID missing. Please enter it again.'
+            'Error' : 'book_id or wish_list_id missing. Please enter it again.'
         }
         return JsonResponse(response, safe=False)
     
