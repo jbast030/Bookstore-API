@@ -26,7 +26,7 @@ class CreateUserView(View):
         username = data.get('username')
 
         # Check if username is provided and not empty
-        if username:
+        if username and password:
             password = data.get('password')
             name = data.get('name')
             email = data.get('email')
@@ -53,7 +53,6 @@ class CreateUserView(View):
                 'error': 'Username is required'
             }
             return JsonResponse(response, status=400)
-        #h
 
 class UserDetailView(View):
     def get(self, request):
