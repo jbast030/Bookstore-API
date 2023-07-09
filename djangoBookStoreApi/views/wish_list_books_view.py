@@ -100,7 +100,7 @@ def create_new_wishlist(request):
     
     #Place the ID and wishlist into their associated variables.
     userID = data.get('user_id')
-    wishlistName = data.get('wishlist_name')
+    wishlistName = data.get('wish_list_name')
 
     #Check whether userID or wishlist name is missing. If so, send error. If not, continue to next check.
     if userID == None or wishlistName == None:
