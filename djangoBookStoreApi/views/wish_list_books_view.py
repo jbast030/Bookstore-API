@@ -42,7 +42,7 @@ def add_book_to_wishlist(request):
 
     #Obtain both IDs and set them to their associated variables for checks.
     bookID = data.get('book_id')
-    wishlistID = data.get('wishlistID')
+    wishlistID = data.get('wish_list_id')
 
     #Check if either ID is missing in request. If so, send error. Else, continue with bookID check.
     if bookID == None or wishlistID == None:
