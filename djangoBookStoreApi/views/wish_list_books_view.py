@@ -61,7 +61,7 @@ def add_book_to_wishlist(request):
     #Check for existing wishlist ID. If not, send error. Else, create new wishlist_book into associated table.
     if wishlistID not in wishlist_list:
         response = {
-            'Error' : 'WishlistID submitted does not exist within the database.'
+            'Error' : 'wish_list_id submitted does not exist within the database.'
         }
         return JsonResponse(response, safe=False)
     else:
