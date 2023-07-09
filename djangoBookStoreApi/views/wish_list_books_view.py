@@ -72,7 +72,7 @@ def add_book_to_wishlist(request):
         )
 
         response = {
-            'Message' : 'Book ID has been successfully added to associated Wishlist.',
+            'Message' : 'Book has been successfully added to the associated wish list.',
             'Book ID' : bookID,
             'Wish List ID' : wishlistID
         }
