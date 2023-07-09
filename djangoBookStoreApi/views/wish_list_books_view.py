@@ -105,7 +105,7 @@ def create_new_wishlist(request):
     #Check whether userID or wishlist name is missing. If so, send error. If not, continue to next check.
     if userID == None or wishlistName == None:
         response = {
-            'Error' : 'User ID or Wishlist Name is missing. Please enter it again.'
+            'Error' : 'user_id or wish_list_name is missing. Please enter it again.'
         }
         return JsonResponse(response, safe=False)
 
