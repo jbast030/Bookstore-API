@@ -7,11 +7,8 @@ from .views.user_profile_view import UserDetailView
 from .views.wish_list_books_view import wish_list_books_view
 from .views.books_view import books_view
 from .views.book_details_view import book_details_view
-from .views.wish_list_books_view import wish_list_books_view
-from .views.books_view import books_view
-from .views.book_details_view import book_details_view
-from .views.book_comments_view import book_comments_view
-
+from .views.book_comments_view import BookCommentsView
+from .views.book_ratings_view import BookRatingsView
 
 urlpatterns = [
     path('test/', test_view),
@@ -22,9 +19,6 @@ urlpatterns = [
     path('user/<int:id>/wishlist', wish_list_books_view),
     path('books/', books_view),
     path('books/<int:id>/details', book_details_view),
-    path('user/<int:id>/wishlist', wish_list_books_view),
-    path('books/', books_view),
-    path('books/<int:id>/details', book_details_view),
-    path('book/<int:id>/comments', book_comments_view),
-
+    path('book/<int:id>/comments', BookCommentsView.as_view(), name='book_comments'),
+    path('book/<int:id>/ratings', BookRatingsView.as_view()),
 ]
