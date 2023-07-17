@@ -9,6 +9,9 @@ from .views.wish_list_books_view import add_book_to_wishlist
 from .views.wish_list_books_view import create_new_wishlist
 from .views.books_view import books_view
 from .views.book_details_view import book_details_view, genre_view, best_selling_books
+from .views.book_details_view import book_details_view
+from .views.book_comments_view import BookCommentsView
+from .views.book_ratings_view import BookRatingsView
 
 urlpatterns = [
     path('test/', test_view),
@@ -23,4 +26,6 @@ urlpatterns = [
     path('books/genre/', genre_view, name='genre'),
     path('books/top_sellers/', best_selling_books, name='top_sellers'),
     path('books/<int:id>/details', book_details_view),
+    path('book/<int:id>/comments', BookCommentsView.as_view(), name='book_comments'),
+    path('book/<int:id>/ratings', BookRatingsView.as_view()),
 ]
